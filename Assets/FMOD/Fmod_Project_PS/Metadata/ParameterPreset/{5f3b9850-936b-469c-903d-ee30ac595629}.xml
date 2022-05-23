@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{5f3b9850-936b-469c-903d-ee30ac595629}">
+		<property name="name">
+			<value>Lowpass</value>
+		</property>
+		<relationship name="folder">
+			<destination>{f5080b6c-dbf1-4d35-b43c-ea407c5e8767}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{38fb343a-45e4-419f-945c-cff281ccbfb8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{38fb343a-45e4-419f-945c-cff281ccbfb8}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>2.6000001430511475</value>
+		</property>
+	</object>
+</objects>

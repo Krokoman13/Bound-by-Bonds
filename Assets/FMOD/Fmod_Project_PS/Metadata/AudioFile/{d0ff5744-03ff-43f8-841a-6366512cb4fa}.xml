@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d0ff5744-03ff-43f8-841a-6366512cb4fa}">
+		<property name="assetPath">
+			<value>Rain_Drops/Rain_Drop_10.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.40625850340136055</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b43cf2f1-92a8-4a3d-abea-15acffc168f8}</destination>
+		</relationship>
+	</object>
+</objects>
