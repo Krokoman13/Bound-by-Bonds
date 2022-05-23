@@ -1,16 +1,17 @@
 using System;
-using UnityEngine;
-
 using UnityEngine.Events;
+using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public enum InteractionType {Collecting, Delivering, NONE}   //can this object be taken or does it receive an item?
+    public enum InteractionType {Collecting, Delivering, Interactable, NONE}   //can this object be taken or does it receive an item?
     public InteractionType interactType = InteractionType.Collecting;
 
     public enum ItemType {Bandages, Ammo, Consumable, NONE}
     public ItemType itemType = ItemType.NONE;
     public string itemName = "NewItem";
+    [Tooltip("How many times can you interact with this object before it's collider disappears.\nShould be minimum of 1.")]
+    public int interactAmount = 1;
 
     //PLAYER COMPONENTS
     public delegate void InteractableDelegate(Interactable player);
@@ -21,12 +22,15 @@ public class Interactable : MonoBehaviour
     //Interacting with player
     //Highlight
     public Action onInteractableHighlight_Start = null;
-    public Action onInteractableHighlight_Stop = null;
+    public Action onInteractableHighlight_Stop = null;        
+
 
     //PAUSE
     public Action onPauseAction = null;
     public Action onUnpauseAction = null;
     bool isPaused = false;
+
+    public UnityEvent onInteractEvent = null;
 
 
     void Start()
@@ -86,5 +90,10 @@ public class Interactable : MonoBehaviour
             Debug.LogError("Error, pauseManager could not be found.", this);
         }
         return pause;
+    }
+
+    public void DebugPrint(string debugMsg)
+    {
+        Debug.Log(debugMsg);
     }
 }

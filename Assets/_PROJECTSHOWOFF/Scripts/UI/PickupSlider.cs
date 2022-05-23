@@ -14,11 +14,13 @@ public class PickupSlider : MonoBehaviour
     [Header("Sprites")]
     [SerializeField] Sprite sprite_take = null;
     [SerializeField] Sprite sprite_give = null;
+    [SerializeField] Sprite sprite_interact = null;
     [SerializeField] Sprite sprite_notEnough = null;
 
     [Header("Descriptions")]
     [SerializeField] string description_take = "Hold [E] to take";
     [SerializeField] string description_give = "Hold [E] to give";
+    [SerializeField] string description_interact = "Hold [E] to interact";
     [SerializeField] string description_notEnough = "You don't have this item";
 
 
@@ -104,6 +106,8 @@ public class PickupSlider : MonoBehaviour
         Sprite newSprite = sprite_give;
         if (newType == Interactable.InteractionType.Collecting)
             newSprite = sprite_take;
+        else if (newType == Interactable.InteractionType.Interactable)
+            newSprite = sprite_interact;
         
         return newSprite;
     }
@@ -115,6 +119,8 @@ public class PickupSlider : MonoBehaviour
         string newString = description_give;
         if (newType == Interactable.InteractionType.Collecting)
             newString = description_take;
+        else if (newType == Interactable.InteractionType.Interactable)
+            newString = description_interact;
         
         StringBuilder sb = new StringBuilder(newString + $" {interactable.itemName}");
         return sb.ToString();

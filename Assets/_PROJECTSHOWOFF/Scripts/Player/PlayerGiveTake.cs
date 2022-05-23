@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using UnityEngine.Events;
 using TMPro;
 using System.Text;
 using UnityEngine;
@@ -27,24 +27,38 @@ public class PlayerGiveTake : PlayerComponent
 
     void Test_SliderComplete()
     {
-        int value = 1;
-        if (pInteractCheck.highlightedTarget.interactType == Interactable.InteractionType.Delivering)
-        {
-            value = -1;
-        }
-        else
-            Destroy(pInteractCheck.highlightedTarget.gameObject);
+        //Cache current interactable
+        Interactable interactable = pInteractCheck.highlightedTarget;
 
-        switch (pInteractCheck.highlightedTarget.itemType)
+        int valueToAdd = 1;
+
+        //DELIVERING OBJECT TO INTERACTABLE
+        if (interactable.interactType == Interactable.InteractionType.Delivering)        
+            valueToAdd = -1;        
+        //COLLECT OBJECT FROM INTERACTABLE
+        else if (interactable.interactType == Interactable.InteractionType.Collecting)
+            Destroy(interactable.gameObject);
+        //INTERACT WITH OBJECT
+        else
+        {
+            interactable.onInteractEvent?.Invoke();
+
+
+            interactable.interactAmount--;
+            if (interactable.interactAmount <= 0)
+                Destroy(interactable);            
+        }
+
+        switch (interactable.itemType)
         {
             case Interactable.ItemType.Bandages:
-                inv_bandagesAmount += value;
+                inv_bandagesAmount += valueToAdd;
                 break;
             case Interactable.ItemType.Ammo:
-                inv_ammo += value;
+                inv_ammo += valueToAdd;
                 break;
             case Interactable.ItemType.Consumable:
-                inv_consumable += value;
+                inv_consumable += valueToAdd;
                 break;
             case Interactable.ItemType.NONE:
                 break;
@@ -52,8 +66,6 @@ public class PlayerGiveTake : PlayerComponent
                 break;
         }
         UpdateInventoryText();
-        
-        
     }
 
 
@@ -106,7 +118,7 @@ public class PlayerGiveTake : PlayerComponent
         sb.Append($"Ammo: {inv_ammo}\n");
         sb.Append($"Consumable: {inv_consumable}");
 
-        if(inventoryText != null)
+        if (inventoryText != null)
             inventoryText.text = sb.ToString();
     }
 
@@ -116,7 +128,7 @@ public class PlayerGiveTake : PlayerComponent
         Interactable.ItemType itemType = pInteractCheck.highlightedTarget.itemType;
 
         //When collecting, ensure you've got enough items.
-        if(pInteractCheck.highlightedTarget.interactType == Interactable.InteractionType.Delivering)
+        if (pInteractCheck.highlightedTarget.interactType == Interactable.InteractionType.Delivering)
         {
             //Not Enough
             if (itemType == Interactable.ItemType.Ammo && inv_ammo <= 0 ||
@@ -130,7 +142,6 @@ public class PlayerGiveTake : PlayerComponent
                 return;
             }
         }
-        
         //Enough
         pickupSlider.SetSlider(pInteractCheck.highlightedTarget);
         pickupSlider.gameObject.SetActive(true);

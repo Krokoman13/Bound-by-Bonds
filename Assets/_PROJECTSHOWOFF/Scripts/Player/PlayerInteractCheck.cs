@@ -12,8 +12,7 @@ public class PlayerInteractCheck : PlayerComponent
     Transform camT = null;    //Reference to the Camera's transform.
 
     //Target result
-    //[HideInInspector]
-    public Interactable highlightedTarget = null;
+    [HideInInspector] public Interactable highlightedTarget = null;
 
     //Variables
     [SerializeField] float targetSelectionRange = 50;
@@ -25,15 +24,13 @@ public class PlayerInteractCheck : PlayerComponent
     public InteractDelegate onHighlightStop = null;
 
 
-
-
     public override void OnPlayerStart(Player pPlayer)
     {
         //Application.targetFrameRate = 60;
-        camT = Camera.main.transform;        
-        highlightedTarget = null;                
+        camT = Camera.main.transform;
+        highlightedTarget = null;
     }
-    
+
     public override void OnPlayerUpdate()
     {
         if (camT == null)
@@ -50,10 +47,10 @@ public class PlayerInteractCheck : PlayerComponent
         TargetSelectionRay();
     }
 
-    
+
     /// Casts a ray forward from the camera's position and will highlight objects it sees.    
     void TargetSelectionRay()
-    {        
+    {
         List<Interactable> interactables = new List<Interactable>();
 
         Debug.DrawLine(camT.position, camT.position + camT.forward * targetSelectionRange, Color.red);
