@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 1929835079537460383}
   - component: {fileID: 1929835079537460381}
   m_Layer: 0
-  m_Name: GrabIcon
+  m_Name: InteractIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 67c234e6f1ae1ea4ea47fdbac1e3100c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3dc9a7f8e0c5ccc42b8dd296ad3fb5fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -421,13 +421,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1929835080228343944}
   - component: {fileID: 1929835080228344053}
+  - component: {fileID: 48950464}
   m_Layer: 0
   m_Name: PickupSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1929835080228343944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -463,8 +464,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1929835079437568229}
+  interactionImage: {fileID: 1929835079537460383}
   text: {fileID: 1929835079158193205}
-  sprite_take: {fileID: 21300000, guid: 3dc9a7f8e0c5ccc42b8dd296ad3fb5fa, type: 3}
-  sprite_give: {fileID: 21300000, guid: 67c234e6f1ae1ea4ea47fdbac1e3100c, type: 3}
-  description_take: Hold [E] to grab
+  sprite_take: {fileID: 21300000, guid: 67c234e6f1ae1ea4ea47fdbac1e3100c, type: 3}
+  sprite_give: {fileID: 21300000, guid: 3dc9a7f8e0c5ccc42b8dd296ad3fb5fa, type: 3}
+  sprite_interact: {fileID: 21300000, guid: 25a14e4b8399a164eb55b5026347c17b, type: 3}
+  sprite_notEnough: {fileID: 21300000, guid: 85efe0b7ba67d224abdf8e5c62d6a045, type: 3}
+  description_take: Hold [E] to take
   description_give: Hold [E] to give
+  description_interact: Hold [E] to interact
+  description_notEnough: You don't have this item
+--- !u!225 &48950464
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929835080228343945}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

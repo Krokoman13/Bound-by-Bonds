@@ -92,7 +92,7 @@ MonoBehaviour:
   target: 1
   appearTime: 10
   speaker: Denys
-  text: The old church, been a long time
+  text: ' been a long timeeen a long time'
 --- !u!65 &2685707720276516781
 BoxCollider:
   m_ObjectHideFlags: 0
