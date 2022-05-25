@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 28
+  controlID: 16
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 29
+  controlID: 17
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 30
+  controlID: 18
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -378,22 +378,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material
+    - Assets/PIPELINE
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material
+  - Assets/PIPELINE
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\ForkGit\Bound-by-Bonds
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 703.80005}
-    m_SelectedIDs: a66e0100
-    m_LastClickedID: 93862
-    m_ExpandedIDs: 00000000528700005487000056870000588700005a8700005c8700005e87000060870000b6930000c46a01001e6c0100a26e0100ffffff7f
+    scrollPos: {x: 0, y: 511}
+    m_SelectedIDs: 46950000
+    m_LastClickedID: 38214
+    m_ExpandedIDs: 00000000de920000e0920000e2920000e4920000e6920000e8920000ea920000ec920000589500005a9500005c950000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -421,7 +421,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000528700005487000056870000588700005a8700005c8700005e87000060870000
+    m_ExpandedIDs: 00000000de920000e0920000e2920000e4920000e6920000e8920000ea920000ec920000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000e0980000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -550,10 +550,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 552.4}
-      m_SelectedIDs: 480effff
-      m_LastClickedID: -61880
-      m_ExpandedIDs: 50faffff14fbffff767c0000d47c0000267d0000
+      scrollPos: {x: 0, y: 1560.4}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 02f0fffffafaffff207d0000807d0000c07d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -611,8 +611,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -100, y: -25.600006}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -100, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -622,9 +622,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: -207}
+      snapOffset: {x: -141, y: 149}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 3
+      snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
@@ -633,7 +633,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -836,9 +836,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 398.60632, y: -71.173355, z: -788.80725}
+    m_Target: {x: -52.151566, y: -1021.63306, z: 1008.1336}
     speed: 2
-    m_Value: {x: 398.60632, y: -71.173355, z: -788.80725}
+    m_Value: {x: -52.151566, y: -1021.63306, z: 1008.1336}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -885,13 +885,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.015009398, y: 0.93935657, z: -0.041450072, w: 0.34012407}
+    m_Target: {x: -0.43057436, y: 0.07997266, z: -0.03833788, w: -0.89823204}
     speed: 2
-    m_Value: {x: 0.015071416, y: 0.93883663, z: -0.041427128, w: 0.34152955}
+    m_Value: {x: -0.43324968, y: 0.079854056, z: -0.03857611, w: -0.8969002}
   m_Size:
-    m_Target: 516.67834
+    m_Target: 767.38916
     speed: 2
-    m_Value: 541.0245
+    m_Value: 803.5489
   m_Ortho:
     m_Target: 0
     speed: 2
