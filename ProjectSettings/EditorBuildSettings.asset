@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_USERS/Sep/SepScene1.unity
     guid: 905e4992c6bfbb84594581d5e66c491f
   - enabled: 0
-    path: Assets/_PROJECTSHOWOFF/Scenes/SampleScene.unity
+    path: 
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/_PROJECTSHOWOFF/Scenes/MatchMaker.unity
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_PROJECTSHOWOFF/Scenes/Level1.unity
     guid: f12139b9bd90aef40aa741469f0354e6
+  - enabled: 1
+    path: Assets/_PROJECTSHOWOFF/Scenes/EndScreen.unity
+    guid: 22a239d7a95a983449db39199970ae06
   m_configObjects: {}

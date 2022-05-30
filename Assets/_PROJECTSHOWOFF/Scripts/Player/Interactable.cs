@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public enum InteractionType {Collecting, Delivering, Interactable, NONE}   //can this object be taken or does it receive an item?
+    public enum InteractionType {Collecting, Delivering, Interactable, NONE, ActivateMemory}   //can this object be taken or does it receive an item?
     public InteractionType interactType = InteractionType.Collecting;
 
-    public enum ItemType {Bandages, Ammo, Consumable, NONE}
+    public enum ItemType {Bandages, Ammo, Consumable, NONE, ActivateMemory}
     public ItemType itemType = ItemType.NONE;
     public string itemName = "NewItem";
     [Tooltip("How many times can you interact with this object before it's collider disappears.\nShould be minimum of 1.")]

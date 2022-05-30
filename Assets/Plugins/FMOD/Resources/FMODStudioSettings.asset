@@ -435,6 +435,7 @@ MonoBehaviour:
   - Master
   Banks:
   - 3D_Ambiance
+  - Cinematics
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
