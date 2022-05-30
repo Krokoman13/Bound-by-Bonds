@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 124608466798528049}
   - component: {fileID: 124608466798528062}
-  - component: {fileID: 124608466798528063}
   - component: {fileID: 2685707720276516781}
+  - component: {fileID: 2683451475128492187}
+  - component: {fileID: 39147559}
   m_Layer: 0
   m_Name: ColliderHandeler
   m_TagString: Untagged
@@ -53,7 +54,7 @@ MonoBehaviour:
   onCollision:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 124608466798528063}
+      - m_Target: {fileID: 39147559}
         m_TargetAssemblyTypeName: SubtitleSender, Assembly-CSharp
         m_MethodName: SendSubtitle
         m_Mode: 1
@@ -65,34 +66,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TempActivate, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &124608466798528063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124608466798528051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa800650c565c74418ea0d65cb465434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: 1
-  appearTime: 10
-  speaker: Denys
-  text: ' been a long timeeen a long time'
 --- !u!65 &2685707720276516781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106,3 +79,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2683451475128492187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124608466798528051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6698599737820b541a8087642d74dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName:
+    Guid:
+      Data1: -2134622945
+      Data2: 1272182051
+      Data3: 1416193214
+      Data4: -1763268389
+    Path: event:/Voices_NPC
+--- !u!114 &39147559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124608466798528051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa800650c565c74418ea0d65cb465434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 2
+  subtitleIndexes: 03000000
+  fmodAudioSource: {fileID: 2683451475128492187}
+  skipQueue: 1

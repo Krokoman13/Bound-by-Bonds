@@ -19,6 +19,10 @@ public class SubtitlesHandler : MonoBehaviour
 
 
 
+    [HideInInspector]public ScriptUsageProgrammerSounds currentFMOD_AudioSource = null;
+    ReadSheet_Subtitles readSheet = null;
+
+
     public void StartNextSubtitle()
     {
         //There's no next subtitle
@@ -36,13 +40,6 @@ public class SubtitlesHandler : MonoBehaviour
         runSubtitleTimer = true;
     }
 
-
-    void AddNewSubtitle(Subtitle sub)
-    {
-        OnEnableSubtitles();
-        subtitles.Enqueue(sub);
-        runSubtitleTimer = true;
-    }
 
     void FixedUpdate()
     {
@@ -65,23 +62,54 @@ public class SubtitlesHandler : MonoBehaviour
         {
             StartNextSubtitle();
         }
-
-
-
     }
 
-    [ContextMenu("Add test subtitle")]
-    void TestSubtitles()
+
+    public void AddSubtitleToQueue(int subtitleLine, ScriptUsageProgrammerSounds fmodSource)
     {
-        Subtitle newSub = new Subtitle();
-        newSub.text = $"This is a test message. Here's a random number: {Random.Range(0, 5000)}";
-        newSub.appearTime = 1;
-        AddNewSubtitle(newSub);
+        Subtitle sub = readSheet.GetSubtitleFromIndex(subtitleLine);
+        FindObjectOfType<ScriptUsageProgrammerSounds>().PlayAudioFMOD(sub.audioKey);
+
+        OnEnableSubtitles();
+        subtitles.Enqueue(sub);
+        runSubtitleTimer = true;
     }
 
-    public void AddSubtitleToQueue(Subtitle newSub)
-    {                     
-        AddNewSubtitle(newSub);
+
+
+    //[ContextMenu("Add test subtitle")]
+    //void TestSubtitles()
+    //{
+    //    Subtitle newSub = new Subtitle();
+    //    newSub.text = $"This is a test message. Here's a random number: {Random.Range(0, 5000)}";
+    //    newSub.appearTime = 1;
+    //    AddNewSubtitle(newSub);
+    //}
+
+    public void AddSubtitleToQueue(int subtitleLine)
+    {        
+        Subtitle sub = readSheet.GetSubtitleFromIndex(subtitleLine);
+        currentFMOD_AudioSource.PlayAudioFMOD(sub.audioKey);
+        //FindObjectOfType<ScriptUsageProgrammerSounds>().PlayAudioFMOD(sub.audioKey);
+
+        OnEnableSubtitles();
+        subtitles.Enqueue(sub);
+        runSubtitleTimer = true;
+    }
+
+
+
+    public void PlaySubtitleNow(int subtitleLine)
+    {        
+        Subtitle sub = readSheet.GetSubtitleFromIndex(subtitleLine);
+        currentFMOD_AudioSource.PlayAudioFMOD(sub.audioKey);
+        //FindObjectOfType<ScriptUsageProgrammerSounds>().PlayAudioFMOD(sub.audioKey);
+
+        OnEnableSubtitles();
+        subtitle_timer = 0;
+        subtitles.Clear();
+        subtitles.Enqueue(sub);
+        runSubtitleTimer = true;
     }
 
 
@@ -98,19 +126,21 @@ public class SubtitlesHandler : MonoBehaviour
     }
 
 
-    void Update()
-    {
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TestSubtitles();
-        }
-#endif
-    }
+//    void Update()
+//    {
+//#if UNITY_EDITOR
+//        if (Input.GetKeyDown(KeyCode.T))
+//        {
+//            TestSubtitles();
+//        }
+//#endif
+//    }
 
     void Awake()
     {
         TryGetComponent<TextMeshProUGUI>(out subtitle_text);
+        TryGetComponent<ReadSheet_Subtitles>(out readSheet);
         OnDisableSubtitles();
     }
+    
 }

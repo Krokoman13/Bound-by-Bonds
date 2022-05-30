@@ -434,8 +434,13 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - 3D_Ambiance
+  - 3D_Ambience
   - Cinematics
+  - SFX_MenuItems
+  - Voice_Lines
+  - Voices_NPC
+  - Voices_Radio
+  - Voices_Self
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
