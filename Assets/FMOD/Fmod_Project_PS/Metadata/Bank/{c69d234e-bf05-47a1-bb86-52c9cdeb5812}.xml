@@ -10,5 +10,16 @@
 		<relationship name="folder">
 			<destination>{d8ced302-906f-40c7-bc1c-e5b1a63381bf}</destination>
 		</relationship>
+		<relationship name="audioTable">
+			<destination>{fb119c61-48a9-408b-acf9-c25740491a33}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{fb119c61-48a9-408b-acf9-c25740491a33}">
+		<property name="name">
+			<value>MenuItems</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>../../StreamingAssets/FMOD_Audio/Voice_Lines</value>
+		</property>
 	</object>
 </objects>

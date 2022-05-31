@@ -5,26 +5,46 @@ using UnityEngine;
 public class SubtitleSender : MonoBehaviour
 {
     [SerializeField] Sibling target;
-    [SerializeField] float appearTime = 1;
-    [SerializeField] string speaker = "Developer";
-    [SerializeField] string text = "This is a test message.";
+    [SerializeField] int[] subtitleIndexes = new int[1] { 3 };
+    public ScriptUsageProgrammerSounds fmodAudioSource = null;
+
+    [SerializeField] bool skipQueue = true;
 
     public void SendSubtitle()
     {
-        Subtitle subtitle = new Subtitle();
-        subtitle.appearTime = appearTime;
-        subtitle.speaker = speaker;
-        subtitle.text = text;
+        if (isBugged()) return;
+
+        SubtitlesHandler subHandler = null;
 
         switch (target)
         {
             case Sibling.Dana:
-                DanaSubtitlesHandler.instance.AddSubtitleToQueue(subtitle);
-                return;
+                subHandler = DanaSubtitlesHandler.instance;
+                //SoldierSubtitlesHandler.instance.AddSubtitleToQueue(subtitle);
+                break;
 
             case Sibling.Denys:
-                DenysSubtitlesHandeler.instance.AddSubtitleToQueue(subtitle);
-                return;
+                subHandler = DenysSubtitlesHandeler.instance;
+                //OperatorSubtitlesHandeler.instance.AddSubtitleToQueue(subtitle);
+                break;
         }
+
+        int rndm = Random.Range(0, subtitleIndexes.Length);
+        subHandler.currentFMOD_AudioSource = fmodAudioSource;
+
+        if (skipQueue)
+            subHandler.PlaySubtitleNow(subtitleIndexes[rndm]);
+        else
+            subHandler.AddSubtitleToQueue(subtitleIndexes[rndm]);
+    }
+
+    bool isBugged()
+    {
+        if (fmodAudioSource == null)
+        {
+            Debug.LogError("ERROR: FMOD_AUDIO-SOURCE NOT ASSIGNED.", this.gameObject);
+            return true;
+        }
+        return false;
     }
 }

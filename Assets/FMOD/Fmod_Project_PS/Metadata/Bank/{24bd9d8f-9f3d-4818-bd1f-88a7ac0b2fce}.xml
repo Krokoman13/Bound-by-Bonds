@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Bank" id="{24bd9d8f-9f3d-4818-bd1f-88a7ac0b2fce}">
+		<property name="name">
+			<value>SFX_MenuItems</value>
+		</property>
+		<relationship name="folder">
+			<destination>{db1f1242-a09a-4c11-a317-122f678ef626}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{7f3e5068-dd44-4eca-898f-102199675aba}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{7f3e5068-dd44-4eca-898f-102199675aba}">
+		<property name="name">
+			<value>SFX_MenuItems</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>.</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Bank" id="{e9a7c80e-178a-4ed8-b1b7-d9d42191c09d}">
+		<property name="name">
+			<value>Voices_Radio</value>
+		</property>
+		<relationship name="folder">
+			<destination>{6810e7ac-161e-4489-a889-5b75896b22c0}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{0b3a90c8-b66a-4f80-b374-ab602273faa4}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{0b3a90c8-b66a-4f80-b374-ab602273faa4}">
+		<property name="name">
+			<value>Voices_Radio</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>../../StreamingAssets/FMOD_Audio/Voices_Radio</value>
+		</property>
+	</object>
+</objects>
