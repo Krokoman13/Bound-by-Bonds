@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(ScriptUsageProgrammerSounds))]
 public class SubtitleSender : MonoBehaviour
 {
     [SerializeField] Sibling target;
@@ -9,6 +10,11 @@ public class SubtitleSender : MonoBehaviour
     public ScriptUsageProgrammerSounds fmodAudioSource = null;
 
     [SerializeField] bool skipQueue = true;
+
+    private void Start()
+    {
+        fmodAudioSource = GetComponent<ScriptUsageProgrammerSounds>();
+    }
 
     public void SendSubtitle()
     {
