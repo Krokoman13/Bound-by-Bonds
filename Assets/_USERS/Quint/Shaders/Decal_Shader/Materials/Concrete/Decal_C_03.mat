@@ -41,7 +41,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Alpha:
-        m_Texture: {fileID: 2800000, guid: 1ec3f49711d57294f8aac206250e2653, type: 3}
+        m_Texture: {fileID: 2800000, guid: 191cf5e13d5f1104ead4125ff0bfd406, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -138,14 +138,14 @@ Material:
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
-    - _Alpha_Strenght: 13.09
+    - _Alpha_Strenght: 19.14
     - _Alpha_Strength: 38.76
     - _Blend: 0
     - _BlendMode: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Color_Strenght: 0
+    - _Color_Strenght: 0.48
     - _ConservativeDepthOffsetEnable: 0
     - _Cull: 2
     - _CullMode: 2
