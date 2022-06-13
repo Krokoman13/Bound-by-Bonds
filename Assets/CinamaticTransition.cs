@@ -60,7 +60,7 @@ public class CinamaticTransition : MonoBehaviour
     private void Teleport(Transform toTeleport)
     {
         toTeleport.position = teleportPoint.position;
-        toTeleport.rotation = teleportPoint.rotation;
+        //toTeleport.rotation = teleportPoint.rotation;
 
         if (spaceA == null || spaceB == null) return;
 
