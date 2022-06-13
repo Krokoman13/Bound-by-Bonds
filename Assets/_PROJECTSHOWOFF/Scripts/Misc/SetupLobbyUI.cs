@@ -53,7 +53,7 @@ public class SetupLobbyUI : MonoBehaviourPun
             return;
         }
 
-        if (PhotonNetwork.PlayerList.Length > 1)
+        if (PhotonNetwork.PlayerList.Length > 0)
         {
             startGame.SetActive(true);
             return;

@@ -5,6 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/_PROJECTSHOWOFF/Scenes/MatchMaker.unity
+    guid: dba74969937c4004d89b43db63dfeeaa
+  - enabled: 1
+    path: Assets/_PROJECTSHOWOFF/Scenes/Level1Prefabs.unity
+    guid: 03f796862eedd4344bf9bbcf087df7c2
   - enabled: 0
     path: Assets/_USERS/Quint/Scene/Texture_Test_Scene.unity
     guid: 22060500e06ff7d47b2cd034e764e6ac
@@ -13,17 +19,14 @@ EditorBuildSettings:
     guid: 905e4992c6bfbb84594581d5e66c491f
   - enabled: 0
     path: 
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/_PROJECTSHOWOFF/Scenes/MatchMaker.unity
-    guid: dba74969937c4004d89b43db63dfeeaa
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/_PROJECTSHOWOFF/Scenes/Lobby.unity
     guid: ab74ad7ed89a91d4cb3a7015a520356b
-  - enabled: 1
+  - enabled: 0
     path: Assets/_PROJECTSHOWOFF/Scenes/Level1.unity
     guid: f12139b9bd90aef40aa741469f0354e6
-  - enabled: 1
+  - enabled: 0
     path: Assets/_PROJECTSHOWOFF/Scenes/EndScreen.unity
     guid: 22a239d7a95a983449db39199970ae06
   m_configObjects: {}
