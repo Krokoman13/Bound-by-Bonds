@@ -10,7 +10,7 @@ public class ColliderHandeler : MonoBehaviour
 
     [SerializeField] List<string> tags = new List<string> { "Untagged" };
 
-    [SerializeField] UnityEvent onCollision;
+    [SerializeField] UnityEvent<Transform> onCollision;
 
     private void Awake()
     {
@@ -34,7 +34,7 @@ public class ColliderHandeler : MonoBehaviour
     {
         if (tags.Contains(other.gameObject.tag))
         {
-            onCollision.Invoke();
+            onCollision.Invoke(other.transform);
             if (destroyOnCollision) Destroy(gameObject);
         }
     }
