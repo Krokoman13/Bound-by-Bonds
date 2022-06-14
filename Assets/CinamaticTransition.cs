@@ -10,6 +10,7 @@ public class CinamaticTransition : MonoBehaviour
 {
     [SerializeField] GameObject lookAt;
     [SerializeField] float delay;
+    [SerializeField] float secondDelay = 0;
     [SerializeField] VideoPlayer videoPlayer;
 
     [SerializeField] Transform teleportPoint;
@@ -121,7 +122,7 @@ public class CinamaticTransition : MonoBehaviour
 
     private void OnVideoDone()
     {
-        StartCoroutine(DelayedFunction(() => teleportPoint.gameObject.SetActive(false), delay/2));
+        StartCoroutine(DelayedFunction(() => teleportPoint.gameObject.SetActive(false), secondDelay));
         onVideoDone?.Invoke();
     }
 }
