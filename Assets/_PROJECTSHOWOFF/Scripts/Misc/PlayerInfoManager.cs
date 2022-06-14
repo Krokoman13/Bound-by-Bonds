@@ -5,6 +5,7 @@ using UnityEngine;
 using Photon.Pun;
 using System;
 
+[RequireComponent(typeof(PhotonView))]
 public class PlayerInfoManager : MonoBehaviourPun
 {
     [SerializeField] Sibling currentPlayerType;
