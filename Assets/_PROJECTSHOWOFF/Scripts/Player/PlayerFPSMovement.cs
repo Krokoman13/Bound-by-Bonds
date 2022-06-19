@@ -9,6 +9,7 @@ public class PlayerFPSMovement : PlayerComponent
     PlayerFPSGroundCheck groundCheck = null;
 
     [HideInInspector] public Vector2 inputs = new Vector2();
+    [HideInInspector] public bool isMoving = false;
 
     [Header("Movement Variables")]
     [Tooltip("The speed at which the player will move when grounded")]
@@ -54,6 +55,9 @@ public class PlayerFPSMovement : PlayerComponent
 
     Vector3 Acceleration()
     {
+        if (inputs != Vector2.zero) isMoving = true;
+        else isMoving = false;
+
         //Get grounded or aerial accelleration.
         float acc = acc_speed;
         if (!groundCheck.isGrounded) acc = acc_airspeed;
