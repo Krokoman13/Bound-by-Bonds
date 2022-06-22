@@ -3,7 +3,42 @@ guid: e63836264feaf6b419a742f10b3a1e97
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body
+    second: {fileID: 2100000, guid: 7206d0f1eedc6014bac132ff67d31ff2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: farove
+    second: {fileID: 2100000, guid: 07b203fa77f67ef4c8bca6eedb9c9fb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: next to tires
+    second: {fileID: 2100000, guid: 11f11984833eec540b29a2010f39ebb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tires
+    second: {fileID: 2100000, guid: 91e19d07cf6646340b4320a291870498, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: top
+    second: {fileID: 2100000, guid: 073ffaba81756834aa089be0d7582e2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windows
+    second: {fileID: 2100000, guid: 39c589fbcbf758d4b9808ce3e3eeb8b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windows.001
+    second: {fileID: 2100000, guid: 0c0a059d16abe6c4f8e139920351497f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +123,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.0175
+    globalScale: 1.75
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
