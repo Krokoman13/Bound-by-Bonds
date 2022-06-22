@@ -152,6 +152,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Denys
       objectReference: {fileID: 0}
+    - target: {fileID: 6771054387635400121, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
+        type: 3}
+      propertyPath: floorCheckBox
+      value: 
+      objectReference: {fileID: 1700958879462552886}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8, type: 3}
 --- !u!114 &1700958879108651503 stripped
@@ -166,6 +171,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1700958879462552886 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2309355702061377523, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4005810925747393221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1700958879899465858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2309355703639829063, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
@@ -275,6 +286,19 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &8932456611354451955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700958880579462305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac68e5df6862f91499d763146bfe9bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subject: {fileID: 0}
 --- !u!54 &1700958880579462314 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 2309355703194711663, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,

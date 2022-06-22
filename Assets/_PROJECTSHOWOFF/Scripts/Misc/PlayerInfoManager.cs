@@ -71,4 +71,28 @@ public class PlayerInfoManager : MonoBehaviourPun
         yield return new WaitForSeconds(Time.fixedDeltaTime * 2);
         PlayerInfo.changed = false;
     }
+
+    public void SetDana()
+    {
+        SetPlayerType(Sibling.Dana);
+    }
+
+    public void SetDenys()
+    {
+        SetPlayerType(Sibling.Denys);
+    }
+
+    public void SwitchCharacters()
+    {
+        switch (PlayerInfo.currentSibling)
+        {
+            case Sibling.Denys:
+                SetDana();
+                break;
+
+            case Sibling.Dana:
+                SetDenys();
+                break;
+        }
+    }
 }
