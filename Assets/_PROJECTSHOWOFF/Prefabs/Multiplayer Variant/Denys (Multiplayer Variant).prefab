@@ -47,6 +47,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1399040411, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1795901364, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -321,16 +325,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 2309355703294981691, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2309355703294981691, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Denys
-      objectReference: {fileID: 0}
     - target: {fileID: 2309355703639829063, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
         type: 3}
       propertyPath: m_Layer
@@ -395,6 +389,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285198292483194936, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4382628372542843178, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
         type: 3}
@@ -614,12 +613,7 @@ MonoBehaviour:
   behaviours: []
   rigidbodies: []
   sibling: 2
---- !u!1 &1700958880074704126 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2309355703294981691, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4005810925747393221}
-  m_PrefabAsset: {fileID: 0}
+  currentSibling: 0
 --- !u!1 &1700958880579462305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2309355703194711652, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
@@ -654,14 +648,13 @@ MonoBehaviour:
   gameObjects:
   - {fileID: 4495526227999225551}
   - {fileID: 1700958880595106435}
-  - {fileID: 1700958880074704126}
-  - {fileID: 4005810926542322526}
   behaviours:
   - {fileID: 1700958880579462318}
   - {fileID: 1700958879108651503}
   rigidbodies:
   - {fileID: 1700958880579462314}
   sibling: 1
+  currentSibling: 0
 --- !u!114 &245403636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,12 +746,6 @@ MonoBehaviour:
 --- !u!1 &1700958880595106435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2309355703210838086, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4005810925747393221}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4005810926542322526 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1399040411, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
     type: 3}
   m_PrefabInstance: {fileID: 4005810925747393221}
   m_PrefabAsset: {fileID: 0}

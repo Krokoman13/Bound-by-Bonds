@@ -103,16 +103,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Dana
       objectReference: {fileID: 0}
-    - target: {fileID: 1700958880074704126, guid: 977f339ecda56ea4398aa769f7ee89cd,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1700958880074704126, guid: 977f339ecda56ea4398aa769f7ee89cd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Dana
-      objectReference: {fileID: 0}
     - target: {fileID: 1700958880579462305, guid: 977f339ecda56ea4398aa769f7ee89cd,
         type: 3}
       propertyPath: m_Layer
@@ -379,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 4005810926864118234, guid: 977f339ecda56ea4398aa769f7ee89cd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.8299994
+      value: 7.83
       objectReference: {fileID: 0}
     - target: {fileID: 4005810926952876373, guid: 977f339ecda56ea4398aa769f7ee89cd,
         type: 3}
