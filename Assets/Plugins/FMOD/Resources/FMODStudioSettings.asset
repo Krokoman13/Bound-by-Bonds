@@ -435,12 +435,16 @@ MonoBehaviour:
   - Master
   Banks:
   - 3D_Ambience
+  - ButtonClick
   - Cinematics
+  - City_3D
+  - Footsteps
   - SFX_MenuItems
   - Voice_Lines
   - Voices_NPC
   - Voices_Radio
   - Voices_Self
+  - Voices_XXX
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

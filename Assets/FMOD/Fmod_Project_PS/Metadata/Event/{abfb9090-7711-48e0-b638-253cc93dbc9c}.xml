@@ -85,6 +85,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{0639b5b5-1e2b-4f4f-a1ec-69869e05f839}">
+		<property name="volume">
+			<value>-7</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{c245e959-6eca-445d-a79d-0f9a0a670a24}</destination>
 		</relationship>
@@ -143,9 +146,17 @@
 			<destination>{5dc92e18-f8bc-4e46-bb2c-b27b9b448add}</destination>
 			<destination>{4b8275b3-fbfb-4dc8-b65f-36a6745fef5d}</destination>
 			<destination>{14b7de7e-bbfe-4278-939d-6792657ed23d}</destination>
+			<destination>{cdea129d-b7a9-4135-9763-8e7a98e75d3e}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{5c5c54f9-d7b4-4fbe-a980-c4e4b50c2440}" />
+	<object class="MixerBusPanner" id="{5c5c54f9-d7b4-4fbe-a980-c4e4b50c2440}">
+		<property name="surroundPanDirection">
+			<value>69.4439545</value>
+		</property>
+		<property name="surroundPanExtent">
+			<value>358.406372</value>
+		</property>
+	</object>
 	<object class="MultiSound" id="{497b01c6-7223-456b-90eb-208b73bbadf2}">
 		<relationship name="sounds">
 			<destination>{bd0aba7a-4d78-493f-b33f-41b3dc9e44f5}</destination>
@@ -184,7 +195,7 @@
 			<value>2</value>
 		</property>
 		<property name="frequencyA">
-			<value>235.405243</value>
+			<value>225.849808</value>
 		</property>
 		<property name="frequencyD">
 			<value>21999.9902</value>
@@ -196,7 +207,7 @@
 			<value>0.686068952</value>
 		</property>
 		<property name="gainA">
-			<value>7.24137783</value>
+			<value>5.17241478</value>
 		</property>
 		<relationship name="automators">
 			<destination>{d4d0892a-063f-49e9-a8f5-731edac3b149}</destination>
@@ -204,7 +215,7 @@
 	</object>
 	<object class="DistortionEffect" id="{5dc92e18-f8bc-4e46-bb2c-b27b9b448add}">
 		<property name="level">
-			<value>0.0549999997</value>
+			<value>0.0350000001</value>
 		</property>
 	</object>
 	<object class="SFXReverbEffect" id="{4b8275b3-fbfb-4dc8-b65f-36a6745fef5d}">
@@ -252,6 +263,11 @@
 		<relationship name="automators">
 			<destination>{ac068eda-8fab-454c-a54c-c5530beaf131}</destination>
 		</relationship>
+	</object>
+	<object class="CompressorEffect" id="{cdea129d-b7a9-4135-9763-8e7a98e75d3e}">
+		<property name="threshold">
+			<value>-12</value>
+		</property>
 	</object>
 	<object class="SingleSound" id="{bd0aba7a-4d78-493f-b33f-41b3dc9e44f5}">
 		<relationship name="audioFile">
