@@ -29,11 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1200644895, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.83
+      value: 8.05
       objectReference: {fileID: 0}
     - target: {fileID: 1200644895, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.033
       objectReference: {fileID: 0}
     - target: {fileID: 1200644896, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
@@ -293,12 +293,12 @@ PrefabInstance:
     - target: {fileID: 2309355702245395241, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.33
+      value: 8.55
       objectReference: {fileID: 0}
     - target: {fileID: 2309355702245395241, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.033
       objectReference: {fileID: 0}
     - target: {fileID: 2309355702245395242, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
         type: 3}
@@ -309,6 +309,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309355702456546383, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309355702456546383, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.033
       objectReference: {fileID: 0}
     - target: {fileID: 2309355702516556387, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
         type: 3}
