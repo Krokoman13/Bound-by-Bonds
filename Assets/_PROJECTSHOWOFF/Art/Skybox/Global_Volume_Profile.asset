@@ -803,13 +803,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b6af8f7ad32324cb6941c3290e5895, type: 3}
   m_Name: MicroShadowing
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enable:
     m_OverrideState: 1
     m_Value: 1
   opacity:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.1
 --- !u!114 &8087859527795371695
 MonoBehaviour:
   m_ObjectHideFlags: 3
