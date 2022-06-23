@@ -26,6 +26,12 @@ public class MainMenuHandler : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
     }
 
+    public void Disconnect()
+    {
+        if (!PhotonNetwork.IsConnected) return;
+        PhotonNetwork.LeaveRoom();
+    }
+
 
     private void FixedUpdate()
     {
