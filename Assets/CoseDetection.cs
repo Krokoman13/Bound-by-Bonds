@@ -23,7 +23,7 @@ public class CoseDetection : MonoBehaviour
 
         if (closeEnough)
         { 
-            if (PlayerInfo.currentSibling == Sibling.Denys) collider.transform.position = denys.position;
+            if (PlayerInfo.currentSibling == Sibling.Denys) collider.transform.position = dana.position;
             if (PlayerInfo.currentSibling == Sibling.Dana) collider.transform.position = denys.position;
         }
     }
