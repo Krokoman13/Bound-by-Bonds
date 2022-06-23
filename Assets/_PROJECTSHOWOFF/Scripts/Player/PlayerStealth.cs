@@ -1,9 +1,13 @@
 using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(PlayerFPSGroundCheck))]
 [RequireComponent(typeof(PlayerFPSMovement))]
 [RequireComponent(typeof(PlayerFPSSprinting))]
 [RequireComponent(typeof(PlayerFPSCrouching))]
+//[RequireComponent(typeof(SphereCollider))]
 //[RequireComponent(typeof(PlayerFPSJump))]
 
 public class PlayerStealth : PlayerComponent
@@ -32,10 +36,32 @@ public class PlayerStealth : PlayerComponent
     [Space(3)]
     [SerializeField] float noise_landing = 50;
 
+    //private SphereCollider soundCollider;
+    //private List<NoiseReciever> noiseRecievers = new List<NoiseReciever>();
 
     public override void OnPlayerFixedUpdate()
     {
         DetermineStealth();
+        //soundCollider.radius = currentStealth;
+
+        //Run based on interval to improve performance.
+        if (Time.frameCount % 10 != 0)
+            return;
+
+        Collider[] collided = Physics.OverlapSphere(transform.position, currentStealth);
+
+        foreach (Collider col in collided)
+        {
+            float distance = Vector3.Distance(transform.position, col.transform.position);
+            if (distance > currentStealth) continue;
+
+            NoiseReciever noiseReciever;
+            col.gameObject.TryGetComponent<NoiseReciever>(out noiseReciever);
+
+            if (noiseReciever == null) continue;
+
+            noiseReciever.RecieveNoise(transform.position); ;
+        }
     }
 
     void DetermineStealth()
@@ -70,7 +96,7 @@ public class PlayerStealth : PlayerComponent
         currentStealth_perc = noise_landing;
     }
 
-    
+
     public override void OnPlayerStart(Player pPlayer)
     {
         GetComponents();
@@ -98,6 +124,12 @@ public class PlayerStealth : PlayerComponent
         Clamp100(ref noise_landing);
 
         ClampPositive(ref stealthChangeSpeed);
+
+/*        if (soundCollider == null)
+        {
+            soundCollider = GetComponent<SphereCollider>();
+            soundCollider.isTrigger = true;
+        }*/
     }
 
     void Clamp100(ref float valueToClamp)
@@ -109,4 +141,24 @@ public class PlayerStealth : PlayerComponent
     {
         valueToClamp = Mathf.Max(0, valueToClamp);
     }
+
+/*    private void OnTriggerEnter(Collider other)
+    {
+        NoiseReciever noiseReciever;
+
+        other.gameObject.TryGetComponent<NoiseReciever>(out noiseReciever);
+        if (noiseReciever == null) return;
+
+        noiseRecievers.Add(noiseReciever);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        NoiseReciever noiseReciever;
+
+        other.gameObject.TryGetComponent<NoiseReciever>(out noiseReciever);
+        if (noiseReciever == null) return;
+
+        noiseRecievers.Remove(noiseReciever);
+    }*/
 }

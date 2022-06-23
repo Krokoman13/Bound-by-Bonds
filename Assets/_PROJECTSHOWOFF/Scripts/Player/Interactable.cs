@@ -2,16 +2,19 @@ using System;
 using UnityEngine.Events;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+using Photon.Pun;
+
+[RequireComponent(typeof(PhotonView))]
+public class Interactable : MonoBehaviourPun
 {
-    public enum InteractionType {Collecting, Delivering, Interactable, NONE, ActivateMemory}   //can this object be taken or does it receive an item?
+    public enum InteractionType {Collecting, Delivering, Interactable, NONE}   //can this object be taken or does it receive an item?
     public InteractionType interactType = InteractionType.Collecting;
 
-    public enum ItemType {Bandages, Ammo, Consumable, NONE, ActivateMemory}
+    public enum ItemType {Bandages, Ammo, Consumable, NONE}
     public ItemType itemType = ItemType.NONE;
     public string itemName = "NewItem";
-    [Tooltip("How many times can you interact with this object before it's collider disappears.\nShould be minimum of 1.")]
-    public int interactAmount = 1;
+    [Tooltip("How many times can you interact with this object before it's collider disappears.\nShould be minimum of 1.\n 0 means it's infinite")]
+    public int useAmount = 1;
 
     //PLAYER COMPONENTS
     public delegate void InteractableDelegate(Interactable player);
@@ -29,9 +32,8 @@ public class Interactable : MonoBehaviour
     public Action onPauseAction = null;
     public Action onUnpauseAction = null;
     bool isPaused = false;
-
+    
     public UnityEvent onInteractEvent = null;
-
 
     void Start()
     {
@@ -40,7 +42,7 @@ public class Interactable : MonoBehaviour
         pause.onPauseGame?.AddListener(OnPause);
         pause.onUnpauseGame?.AddListener(OnUnpause);
 
-
+        onInteractEvent.AddListener(() => SynchedInteract());
         onInteractableStart?.Invoke(this);
     }
 
@@ -95,5 +97,19 @@ public class Interactable : MonoBehaviour
     public void DebugPrint(string debugMsg)
     {
         Debug.Log(debugMsg);
+    }
+
+    [PunRPC]
+    public void SynchedInteract()
+    {
+        if (!PhotonNetwork.IsConnected) return;
+
+        if (photonView.IsMine)
+        {
+            photonView.RPC(nameof(SynchedInteract), RpcTarget.Others);
+            return;
+        }
+
+        onInteractEvent?.Invoke();
     }
 }

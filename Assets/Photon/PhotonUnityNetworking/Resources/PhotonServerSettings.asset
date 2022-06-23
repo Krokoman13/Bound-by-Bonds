@@ -41,6 +41,7 @@ MonoBehaviour:
   - setLobbyName
   - setPlayerType
   - SetPlayerType
+  - SynchedInteract
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0
