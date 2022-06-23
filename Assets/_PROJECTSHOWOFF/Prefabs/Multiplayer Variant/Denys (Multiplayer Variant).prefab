@@ -157,7 +157,8 @@ PrefabInstance:
       propertyPath: floorCheckBox
       value: 
       objectReference: {fileID: 1700958879462552886}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1445569002, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8, type: 3}
 --- !u!114 &1700958879108651503 stripped
 MonoBehaviour:
@@ -283,10 +284,11 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 245403636}
+  - {fileID: 681260552863672269}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &8932456611354451955
+--- !u!114 &681260552863672269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,10 +297,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1700958880579462305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac68e5df6862f91499d763146bfe9bc2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subject: {fileID: 0}
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: Moving
+  - Type: 4
+    SynchronizeType: 1
+    Name: Crouching
+  - Type: 4
+    SynchronizeType: 1
+    Name: Sprinting
+  - Type: 9
+    SynchronizeType: 1
+    Name: Jump
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0
 --- !u!54 &1700958880579462314 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 2309355703194711663, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
@@ -329,47 +348,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4005810925747393221}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4005810926587802402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1445568999, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4005810925747393221}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3525182661914325864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4005810926587802402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6698599737820b541a8087642d74dc7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventName:
-    Guid:
-      Data1: -2134622945
-      Data2: 1272182051
-      Data3: 1416193214
-      Data4: -1763268389
-    Path: event:/Voices_NPC
---- !u!114 &3530737599108525891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4005810926587802402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eafe2a665177fc449b0d73e7abcc711, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runSubtitleTimer: 1
-  currentQueueCount: 0
-  alphaSpeed: 8
-  currentFMOD_AudioSource: {fileID: 0}
 --- !u!1 &4495526227999225551 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 717249475471811594, guid: 1d340ed6c1888b04e9ec7c0f40a4bbc8,

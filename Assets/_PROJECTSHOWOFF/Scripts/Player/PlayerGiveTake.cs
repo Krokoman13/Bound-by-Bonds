@@ -33,19 +33,24 @@ public class PlayerGiveTake : PlayerComponent
         int valueToAdd = 1;
 
         //DELIVERING OBJECT TO INTERACTABLE
-        if (interactable.interactType == Interactable.InteractionType.Delivering)        
-            valueToAdd = -1;        
+        if (interactable.interactType == Interactable.InteractionType.Delivering)
+        {
+            valueToAdd = -1;
+            interactable.onInteractEvent?.Invoke();
+        }
         //COLLECT OBJECT FROM INTERACTABLE
         else if (interactable.interactType == Interactable.InteractionType.Collecting)
+        {
+            interactable.onInteractEvent?.Invoke();
             Destroy(interactable.gameObject);
+        }
         //INTERACT WITH OBJECT
         else
         {
             interactable.onInteractEvent?.Invoke();
 
-
-            interactable.interactAmount--;
-            if (interactable.interactAmount <= 0)
+            interactable.useAmount--;
+            if (interactable.useAmount <= 0)
                 Destroy(interactable);            
         }
 
@@ -76,10 +81,7 @@ public class PlayerGiveTake : PlayerComponent
             giveTakeInput = false;
 
         }
-        giveTakeInput = Input.GetButton(givetakeInput_name);
-
-
-        inventoryText.gameObject.SetActive(Input.GetButton("Map"));
+        giveTakeInput = Input.GetButton(givetakeInput_name);        
     }
 
     public override void OnPlayerFixedUpdate()

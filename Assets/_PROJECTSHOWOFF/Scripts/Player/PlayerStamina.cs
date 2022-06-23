@@ -9,9 +9,6 @@ public class PlayerStamina : PlayerComponent
 
 
 
-
-
-
     public override void OnPlayerStart(Player pPlayer)
     {
         maxStamina = currentStamina;
