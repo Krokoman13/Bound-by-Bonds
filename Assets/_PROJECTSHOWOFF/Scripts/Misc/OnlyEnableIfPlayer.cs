@@ -9,6 +9,8 @@ public class OnlyEnableIfPlayer : MonoBehaviour
     [SerializeField] List<Rigidbody> rigidbodies;
     [SerializeField] Sibling sibling;
 
+
+    [SerializeField] Sibling currentSibling = Sibling.UNKNOWN;
     // Start is called before the first frame update
     void Awake()
     {
@@ -17,13 +19,14 @@ public class OnlyEnableIfPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!PlayerInfo.changed) return;
+        if (currentSibling == PlayerInfo.currentSibling) return;
         setRightState();
     }
 
     private void setRightState()
     {
-        bool state = PlayerInfo.currentSibling == sibling;
+        currentSibling = PlayerInfo.currentSibling;
+        bool state = currentSibling == sibling;
 
         if ((gameObjects == null || gameObjects.Count <= 0)
             && (behaviours == null || behaviours.Count <= 0)

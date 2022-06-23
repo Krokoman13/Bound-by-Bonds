@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1569042282219140122}
   - component: {fileID: -8139704186014377710}
   - component: {fileID: -2759809640650980407}
+  - component: {fileID: 2406263796999276406}
   m_Layer: 0
   m_Name: MainCam_Player
   m_TagString: MainCamera
@@ -107,7 +108,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 0.3
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -259,3 +260,22 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &2406263796999276406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569042282219140125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb994711f3afb1f43bca3c66c19be647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  danaMask:
+    serializedVersion: 2
+    m_Bits: 639
+  denysMask:
+    serializedVersion: 2
+    m_Bits: 383

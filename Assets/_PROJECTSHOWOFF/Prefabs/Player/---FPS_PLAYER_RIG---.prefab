@@ -1868,7 +1868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subject: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 1121788880}
   animBoolName_Moving: Moving
   animBoolName_Crouching: Crouching
   animBoolName_Sprinting: Sprinting
@@ -1952,9 +1952,12 @@ GameObject:
   - component: {fileID: 2309355703294981690}
   - component: {fileID: 2309355703294981695}
   - component: {fileID: 2309355703294981689}
-  m_Layer: 3
+  - component: {fileID: 7577366325015789522}
+  - component: {fileID: 1148692461461091675}
+  - component: {fileID: 7539789283419299909}
+  m_Layer: 6
   m_Name: Collider
-  m_TagString: PlayerSoldier
+  m_TagString: Dana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1996,6 +1999,71 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7577366325015789522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309355703294981691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7565415693d08f845bd5c03e85503186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1148692461461091675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309355703294981691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &7539789283419299909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309355703294981691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a8b904b5def3da489e1f89aa7e5baa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactType: 2
+  itemType: 3
+  itemName: Sibling
+  useAmount: 1
+  onInteractEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7577366325015789522}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: SwitchToSceneString
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2309355703484875823
 GameObject:
   m_ObjectHideFlags: 0
