@@ -230,7 +230,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AORemapMax: 1
+    - _AORemapMax: 1.0000001
     - _AORemapMin: 0
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
@@ -330,7 +330,7 @@ Material:
     - _S_Intensity_1: 1
     - _S_Intensity_2: 1
     - _Smoothness: 0.193
-    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMax: 0.9999999
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularAAScreenSpaceVariance: 0.1
