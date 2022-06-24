@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3298
+  controlID: 4567
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3299
+  controlID: 4568
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3290
+  controlID: 4569
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: f0b70000
       m_LastClickedID: 0
       m_ExpandedIDs: d0e1fffff6e6ffff0ef1ffff12fbffff32ba0000aeba000086bd0000cebe00002cc0000088c00000a8c00000eac00000
       m_RenameOverlay:
@@ -2457,22 +2457,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_PROJECTSHOWOFF/Art/UI/Icons
+    - Assets/FMOD/Fmod_Project_PS
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_PROJECTSHOWOFF/Art/UI/Icons
+  - Assets/FMOD/Fmod_Project_PS
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Files\GitHub - code\Bound-by-Bonds
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c6aa0000
-    m_LastClickedID: 43718
-    m_ExpandedIDs: 00000000e2870000ea8700002e8b000094aa0000ffffff7f
+    scrollPos: {x: 0, y: 143}
+    m_SelectedIDs: 28b70000
+    m_LastClickedID: 46888
+    m_ExpandedIDs: 00000000e2870000ea8700002e8b00003a8b000094aa0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2500,7 +2500,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e28700002e8b0000ffffff7f
+    m_ExpandedIDs: 00000000e2870000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2525,8 +2525,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: f0b70000
+    m_LastClickedInstanceID: 47088
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000e098000000000000eeeb94004e2501006c4001003e520100
     m_RenameOverlay:

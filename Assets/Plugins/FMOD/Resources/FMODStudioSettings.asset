@@ -438,7 +438,10 @@ MonoBehaviour:
   - ButtonClick
   - Cinematics
   - City_3D
+  - Explosion_Final
   - Footsteps
+  - LandingStep
+  - MainMusic
   - SFX_MenuItems
   - Voice_Lines
   - Voices_NPC
