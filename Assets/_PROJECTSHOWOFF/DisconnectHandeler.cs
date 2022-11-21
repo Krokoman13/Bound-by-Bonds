@@ -13,9 +13,18 @@ public class DisconnectHandeler : MonoBehaviourPunCallbacks
 
     [SerializeField] UnityEvent onLeftRoom = null;
 
+    static DisconnectHandeler onlyOne;
+
     private void Awake()
     {
+        if (onlyOne != null && onlyOne != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         DontDestroyOnLoad(gameObject);
+        onlyOne = this;
     }
 
     private void Update()
@@ -28,8 +37,9 @@ public class DisconnectHandeler : MonoBehaviourPunCallbacks
             if (PhotonNetwork.PlayerList.Length < minplayerAmount)
             {
                 PhotonNetwork.LeaveRoom();
+                PhotonNetwork.Disconnect();
             }
-            
+
             return;
         }
 
@@ -54,5 +64,6 @@ public class DisconnectHandeler : MonoBehaviourPunCallbacks
     {
         onLeftRoom?.Invoke();
         base.OnLeftRoom();
+        //gameObject.SetActive(false);
     }
 }

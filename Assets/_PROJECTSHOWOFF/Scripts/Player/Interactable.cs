@@ -4,7 +4,7 @@ using UnityEngine;
 
 using Photon.Pun;
 
-[RequireComponent(typeof(PhotonView))]
+//[RequireComponent(typeof(PhotonView))]
 public class Interactable : MonoBehaviourPun
 {
     public enum InteractionType {Collecting, Delivering, Interactable, NONE}   //can this object be taken or does it receive an item?
@@ -25,15 +25,15 @@ public class Interactable : MonoBehaviourPun
     //Interacting with player
     //Highlight
     public Action onInteractableHighlight_Start = null;
-    public Action onInteractableHighlight_Stop = null;        
-
+    public Action onInteractableHighlight_Stop = null;
 
     //PAUSE
     public Action onPauseAction = null;
     public Action onUnpauseAction = null;
     bool isPaused = false;
     
-    public UnityEvent onInteractEvent = null;
+    [NonSerialized] public UnityEvent onInteractEvent = null;
+    [SerializeField] UnityEvent action = null;
 
     void Start()
     {
@@ -42,6 +42,7 @@ public class Interactable : MonoBehaviourPun
         pause.onPauseGame?.AddListener(OnPause);
         pause.onUnpauseGame?.AddListener(OnUnpause);
 
+        onInteractEvent = new UnityEvent();
         onInteractEvent.AddListener(() => SynchedInteract());
         onInteractableStart?.Invoke(this);
     }
@@ -103,13 +104,7 @@ public class Interactable : MonoBehaviourPun
     public void SynchedInteract()
     {
         if (!PhotonNetwork.IsConnected) return;
-
-        if (photonView.IsMine)
-        {
-            photonView.RPC(nameof(SynchedInteract), RpcTarget.Others);
-            return;
-        }
-
-        onInteractEvent?.Invoke();
+        photonView.RPC(nameof(SynchedInteract), RpcTarget.Others);
+        action?.Invoke();
     }
 }

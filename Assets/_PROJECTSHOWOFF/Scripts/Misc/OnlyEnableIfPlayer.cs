@@ -10,7 +10,7 @@ public class OnlyEnableIfPlayer : MonoBehaviour
     [SerializeField] Sibling sibling;
 
 
-    [SerializeField] Sibling currentSibling = Sibling.UNKNOWN;
+    Sibling currentSibling = Sibling.UNKNOWN;
     // Start is called before the first frame update
     void Awake()
     {

@@ -8,11 +8,13 @@ using Photon.Pun;
 
 class SceneSwitcher : MonoBehaviour
 {
-    static public void SwitchToSceneString(string scene)
+    [SerializeField] bool multiplayer = true;
+
+    public void SwitchToSceneString(string scene)
     {
         Debug.Log("Loading scene: " + scene);
 
-        if (PhotonNetwork.IsConnected && PhotonNetwork.IsMasterClient)
+        if (multiplayer && PhotonNetwork.IsConnected && PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.LoadLevel(scene);
             return;
@@ -21,10 +23,10 @@ class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
-    static public void SwitchToSceneInt(int sceneID)
+    public void SwitchToSceneInt(int sceneID)
     {
 
-        if (PhotonNetwork.IsConnected && PhotonNetwork.IsMasterClient)
+        if (multiplayer && PhotonNetwork.IsConnected && PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.LoadLevel(sceneID);
             return;
@@ -32,4 +34,10 @@ class SceneSwitcher : MonoBehaviour
 
         SceneManager.LoadScene(sceneID);
     }
+
+    static public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
