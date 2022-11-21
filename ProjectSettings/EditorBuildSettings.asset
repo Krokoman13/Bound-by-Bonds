@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/_PROJECTSHOWOFF/Scenes/Level1.unity
     guid: f12139b9bd90aef40aa741469f0354e6
   - enabled: 0
-    path: Assets/_PROJECTSHOWOFF/Scenes/EndScreen.unity
+    path: 
     guid: 22a239d7a95a983449db39199970ae06
+  - enabled: 1
+    path: Assets/_PROJECTSHOWOFF/Scenes/Credits.unity
+    guid: 7c509f485c94d8f4b81746bbcc79cb37
   m_configObjects: {}

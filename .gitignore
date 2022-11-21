@@ -21,6 +21,7 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode/
 
 # Gradle cache directory
 .gradle/
@@ -81,4 +82,4 @@ fmod_editor.log
 
 .idea/*
 UserSettings
-UserSettings
+UserSettings/
